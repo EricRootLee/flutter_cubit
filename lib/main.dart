@@ -82,6 +82,7 @@ class CounterPage extends StatelessWidget {
             child: FloatingActionButton(
               child: const Icon(Icons.delete_forever),
               onPressed: () async {
+                //!to be ommited
                 final counterBloc = context.read<CounterBloc>();
                 await counterBloc.clear();
                 counterBloc.add(CounterEvent.reset);
